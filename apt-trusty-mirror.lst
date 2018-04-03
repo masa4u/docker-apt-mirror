@@ -1,0 +1,24 @@
+############# config ##################
+#
+# set base_path    /var/spool/apt-mirror
+#
+# set mirror_path  $base_path/mirror
+# set skel_path    $base_path/skel
+# set var_path     $base_path/var
+# set cleanscript $var_path/clean.sh
+# set defaultarch  <running host architectu>
+# set postmirror_script $var_path/postmirror.sh
+# set run_postmirror 0
+set nthreads     10
+set _tilde 0
+#
+############# end config ##############
+
+deb-i386 http://archive.ubuntu.com/ubuntu trusty main main/debian-installer multiverse
+deb-i386 http://archive.ubuntu.com/ubuntu trusty-security main multiverse
+
+deb-amd64 http://archive.ubuntu.com/ubuntu trusty main main/debian-installer multiverse
+deb-amd64 http://archive.ubuntu.com/ubuntu trusty-security main multiverse
+
+
+clean http://archive.ubuntu.com/ubuntu
