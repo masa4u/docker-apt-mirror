@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
 
 # Start nginx to begin serving the mirror
-echo "Starting webserver"
+echo "Starting webserver($FILE)"
 nginx -g 'daemon off;' &
 
 # Run once to perform initial sync
 if [ -z "$SKIP_INITIAL_SYNC" ]; then
     echo "Performing intial sync"
-    echo ${FILE}
-    /usr/bin/apt-mirror "$FILE"
+    if [ -e "/root/apt/$FILE" ]; then
+        /usr/bin/apt-mirror "/root/apt/$FILE"
+    else
+	echo ">>> file not found"
+    fi
 fi
 
 # Start cron to force nightly syncs

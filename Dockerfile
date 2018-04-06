@@ -6,9 +6,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y apt-mirr
 
 RUN mkdir /root/apt
 
-ADD apt-trusty-mirror.lst /root/apt/trusty.list
-ADD apt-xenial-mirror.lst /root/apt/xenial.list
-ADD apt-bionic-mirror.lst /root/apt/bionic.list
+ADD ./apt/trusty.lst /root/apt/trusty.lst
+ADD ./apt/xenial.lst /root/apt/xenial.lst
+ADD ./apt/bionic.lst /root/apt/bionic.lst
 
 ADD nginx-ubuntu-mirror.conf etc/nginx/sites-enabled/default
 ADD cron-apt-mirror /etc/cron.d/apt-mirror

@@ -16,9 +16,11 @@ set _tilde 0
 
 deb-i386 http://archive.ubuntu.com/ubuntu xenial main main/debian-installer multiverse
 deb-i386 http://archive.ubuntu.com/ubuntu xenial-security main multiverse
-
+deb-i386 http://archive.ubuntu.com/ubuntu xenial-updates main multiverse
 
 deb-amd64 http://archive.ubuntu.com/ubuntu xenial main main/debian-installer multiverse
 deb-amd64 http://archive.ubuntu.com/ubuntu xenial-security main multiverse
+deb-amd64 http://archive.ubuntu.com/ubuntu xenial-updates main multiverse
+
 
 clean http://archive.ubuntu.com/ubuntu
